@@ -1,0 +1,272 @@
+:root{
+    --maincolorb:#3d464d;
+    --maincolory:#ffd333;
+}
+body{
+    overflow-x: hidden;
+}
+.shop{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(236, 239, 243);
+}
+.shop .container{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 10px 0px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+.shop .container .url{
+    width: 100%;
+    background-color: white;
+    padding:10px;
+}
+.shop .container .url p{
+    font-size: 15px;
+    color:rgb(118, 123, 128);
+}
+.shop .container .content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 5%;
+}
+
+.shop .container .content .filter{
+     width:25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+}
+.shop .container .content .filter .filterprice{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shop .container .content .filter .filterprice .heading{
+    width: 100%;
+}
+.shop .container .content .filter .filterprice .heading h3{
+    text-transform:uppercase;
+    font-weight: bold;
+    font-size:18px;
+    position: relative;
+}
+.shop .container .content .filter .filterprice .heading h3::after{
+    content: "";
+    position: absolute;
+    width:40%;
+    height: 2px;
+    border-bottom:1px dashed rgb(178, 182, 185);
+    top: 50%;
+}
+.shop .container .content .filter .filterprice form{
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.shop .container .content .filter .filterprice form .count{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.shop .container .content .filter .filterprice form .count .input label,span{
+    color: rgb(88, 84, 84);
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.shop .container .content .productcontent{
+    width:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.shop .container .content .productcontent .anotherfilter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.shop .container .content .productcontent .anotherfilter .icon i{
+     padding: 10px;
+     color: black;
+     background-color: white;
+     transition: .5s ease-in;
+}
+.shop .container .content .productcontent .anotherfilter .icon i:hover{
+    background-color: rgb(236, 239, 243);
+}
+.shop .container .content .productcontent .anotherfilter .icon i:active{
+    padding: 12px;
+    background-color: rgb(219, 223, 227);
+}
+.shop .container .content .productcontent .anotherfilter .sort{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.shop .container .content .productcontent .anotherfilter .sort .sortbtn button{
+      position: relative;
+      border: none;
+      background-color:white;
+      padding: 8px 10px;
+      color: var(--maincolorb)
+}
+.shop .container .content .productcontent .anotherfilter .sort .sortbtn button i{
+    color: var(--maincolorb);
+    padding-left: 5px;
+}
+.shop .container .content .productcontent .productcontainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.shop .container .content .productcontent .productcontainer .product{
+    width:230px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    gap: 8px;
+}
+@media (max-width:820px) {
+    .shop .container .content{
+       flex-direction: column;
+    }
+    .shop .container .content .filter{
+        width: 100%;
+    }
+    .shop .container .content .productcontent .productcontainer .product{
+        width: 100%;
+    }
+}
+.shop .container .content .productcontent .productcontainer .product .image{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+}
+.shop .container .content .productcontent .productcontainer .product .image img{
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+}
+.shop .container .content .productcontent .productcontainer .product .image ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: .5s ease-in-out;
+    z-index: -999;
+}
+
+.shop .container .content .productcontent .productcontainer .product .image ul li{
+    border: 1px solid var(--maincolorb);
+    padding:8px;
+    color:var(--maincolorb);
+    transition: .5s ease-in-out;
+}
+.shop .container .content .productcontent .productcontainer .product .image ul li a i{
+    color: var(--maincolorb);
+    transition: .5s ease-in-out;
+}
+.shop .container .content .productcontent .productcontainer .product .image ul li:hover{
+    background-color: var(--maincolorb);
+}
+.shop .container .content .productcontent .productcontainer .product .image ul li:hover i{
+    color: var(--maincolory);
+}
+.shop .container .content .productcontent .productcontainer .product:hover img{
+    transform: scale(1.2);
+    opacity: .4;
+}
+.shop .container .content .productcontent .productcontainer .product:hover ul{
+    z-index: 999;
+}
+.shop .container .content .productcontent .productcontainer .product .details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding:10px 0px;
+}
+.shop .container .content .productcontent .productcontainer .product .details span{
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: .5s ease-in-out;
+}
+.shop .container .content .productcontent .productcontainer .product .details span:hover{
+    color: var(--maincolory);
+}
+.shop .container .content .productcontent .productcontainer .product .details p small{
+   font-weight: bold;
+   padding-right: 5px;
+}
+.shop .container .content .productcontent .productcontainer .product .details p del{
+    color: #c4c9cc;
+}
+.shop .container .content .productcontent .productcontainer .product .details .star,
+.shop .container .content .productcontent .productcontainer .product .details .star ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shop .container .content .productcontent .productcontainer .product .details .star ul li i{
+  color: var(--maincolory);
+  padding: 2px;
+}
+.shop .container .content .productcontent .productcontainer .product .details .star small{
+    padding: 0px;
+    color: #bbc3c9;
+}
+.shop .container .control{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shop .container .control a{
+    padding:5px 10px;
+    background-color:white;
+    border: 1px solid rgb(229, 232, 235);
+    color: var(--maincolory);
+}
+.shop .container .control a:hover{
+    background-color: #eaeff2;
+}
+.shop .container .control a:first-child{
+    color: #989c9f;
+    font-size: 15px;
+}
+.shop .container .control a:nth-child(2){
+    background-color: var(--maincolory);
+    color: white;
+}

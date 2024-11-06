@@ -1,0 +1,216 @@
+.checkout{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(241, 238, 235);
+}
+.checkout .container{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0px;
+}
+.checkout .container .url{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+}
+.checkout .container .url p{
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+.checkout .container .checkoutcontent{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.checkout .container .checkoutcontent .address{
+    width: 65%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+.checkout .container .checkoutcontent .address .heading,
+.checkout .container .checkoutcontent .total .totalorder,
+.checkout .container .checkoutcontent .total .totalorder .heading{
+    width: 100%;
+}
+.checkout .container .checkoutcontent .address .heading h3,
+.checkout .container .checkoutcontent .total .totalorder .heading h3{
+    text-transform: capitalize;
+    font-size: 15px;
+    color: rgb(25, 26, 27);
+    position: relative;
+}
+.checkout .container .checkoutcontent .address .heading h3::after,
+.checkout .container .checkoutcontent .total .totalorder .heading h3::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    width:75%;
+    height: 2px;
+    border-top: 1px dashed rgb(47, 48, 50);
+}
+.checkout .container .checkoutcontent .address form{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content:flex-start;
+    gap:20px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.checkout .container .checkoutcontent .address form .input{
+    width:48%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:6px;
+}
+.checkout .container .checkoutcontent .address form .input label{
+    font-size: 13px;
+    text-transform: capitalize;
+    color: rgb(50, 47, 47);
+    font-weight: bold;
+}
+.checkout .container .checkoutcontent .address form .input input,select{
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgb(187, 190, 191);
+    outline: none;
+    padding-left: 10px;
+}
+.checkout .container .checkoutcontent .address form .input .check{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    padding:2px;
+}
+.checkout .container .checkoutcontent .address form .input .check input{
+    width:15px;
+    height:15px;
+}
+.checkout .container .checkoutcontent .total{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.checkout .container .checkoutcontent .total .totalorder{
+     display: flex;
+     flex-direction: column;
+     gap:10px;
+     padding: 10px;
+}
+
+.checkout .container .checkoutcontent .total .totalorder .orders,
+.checkout .container .checkoutcontent .total .totalorder .orders .products{
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.checkout .container .checkoutcontent .total .totalorder .orders .products,
+.checkout .container .checkoutcontent .total .totalorder .orders .subtotal,
+.checkout .container .checkoutcontent .total .totalorder .orders .shipping{
+    border-bottom: 1px solid rgb(230, 233, 236);
+    padding: 10px;
+}
+.checkout .container .checkoutcontent .total .totalorder .orders h3{
+    text-transform: capitalize;
+}
+.checkout .container .checkoutcontent .total .totalorder .orders span{
+    color: rgb(158, 164, 169);
+    font-size: 15px;
+}
+.checkout .container .checkoutcontent .total .totalorder .orders .subtotal,
+.checkout .container .checkoutcontent .total .totalorder .orders .shipping,
+.checkout .container .checkoutcontent .total .totalorder .orders .totalp{
+    display: flex;
+    justify-content: space-between;
+}
+.checkout .container .checkoutcontent .total .totalorder .orders .totalp{
+    padding: 10px;
+}
+
+.checkout .container .checkoutcontent .total .payment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.checkout .container .checkoutcontent .total .payment .heading{
+    width: 100%;
+}
+.checkout .container .checkoutcontent .total .payment .heading h3{
+    text-transform: capitalize;
+    position: relative;
+}
+.checkout .container .checkoutcontent .total .payment .heading h3::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    width:70%;
+    height: 2px;
+    border-top: 1px dashed rgb(78, 80, 82);
+}
+.checkout .container .checkoutcontent .total .payment .ways{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+}
+.checkout .container .checkoutcontent .total .payment .ways form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.checkout .container .checkoutcontent .total .payment .ways form .way{
+    width: 100%;
+}
+.checkout .container .checkoutcontent .total .payment .ways form input:last-child{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(230, 177, 71);
+    padding: 10px;
+    color:rgb(28, 27, 27) ;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+}
+.checkout .container .checkoutcontent .total .payment .ways form .way label{
+    text-transform: capitalize;
+    font-size: 15px;
+    color: rgb(55, 54, 54);
+}
+.checkout .container .checkoutcontent .address form.anotheraddress{
+    display: none;
+}
+.toggle{
+    display:block;
+}
+@media (max-width:820px) {
+    .checkout .container .checkoutcontent{
+        flex-direction: column;
+    } 
+    .checkout .container .checkoutcontent .address,
+    .checkout .container .checkoutcontent .total{
+        width: 100%;
+    }
+    .checkout .container .checkoutcontent .address form .input{
+        width: 100%;
+    }
+}
+
